@@ -1,0 +1,13 @@
+extends layout
+block content
+  .container
+     h1 #{title}
+     form(method='post',action='/categories/add')
+        .form-group
+          label Title:
+          input.form-control(name='title',type='text')
+        .form-group
+          label Description:
+          textarea.form-control(name='description')
+        button.btn.btn-primary(type='submit') Save
+        a.btn.btn-danger(href='/manage/categories') Back
